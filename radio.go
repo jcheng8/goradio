@@ -5,7 +5,6 @@ import (
   "fmt"
 	"github.com/mattn/go-runewidth"
 	"github.com/nsf/termbox-go"
-	"time"
 	"os/exec"
 	"io"
 	"bufio"
@@ -167,7 +166,7 @@ func draw_borders(w, h int) {
 
 func draw_header(w, h int) {
 	var banner = "GoRadio"
-	var link = "github/jcheng8/goradio"
+	var link = "github.com/jcheng8/goradio"
 
 	fmt.Sprintf("%v %v", w-len(link), h)
 
@@ -225,7 +224,7 @@ func draw_all(stations []RadioStation, cursor_on_station int) {
 
 	w, h := termbox.Size()
 	draw_header(w, h)
-	draw_footer("Ready (Enter: Play | m: Mute | +: Louder | -: Quietr | k/↑ : Up | j/↓: Down)")
+	draw_footer("Ready (Esc: Quit app | Enter: Play | q: Stop | m: Mute | +: Louder | -: Quieter | k/↑ : Up | j/↓: Down)")
 	draw_stations(stations, cursor_on_station)
 	draw_borders(w, h)
 
@@ -387,5 +386,4 @@ func main() {
 	close(event_queue)
 	close(status_chan)
 	close(pipe_chan)
-	time.Sleep(0*time.Second)
 }
