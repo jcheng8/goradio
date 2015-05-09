@@ -1,4 +1,4 @@
-**GoRadio** is a terminal based internal radio player written in golang. It's my first go project and heavily borrowed from coderholic's pyradio [https://github.com/coderholic/pyradio]() Termbox-go is used for the interface instead of curse.
+**GoRadio** is a terminal based internal radio player written in golang. It's my first go project and heavily borrowed from coderholic's [pyradio](https://github.com/coderholic/pyradio). Termbox-go is used for the interface instead of curse.
 
 **Usage**
 
